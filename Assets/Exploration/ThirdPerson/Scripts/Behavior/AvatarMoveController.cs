@@ -45,6 +45,19 @@ public class AvatarMoveController : GenericBehaviour
 
     public override void LocalFixedUpdate()
     {
+        // Stop ALL momentum and animation if talking!
+        if (DialogueManager.instance != null && DialogueManager.instance.dialogueCanvas.activeSelf)
+        {
+            behaviourManager.GetAnim.SetFloat(speedFloat, 0f); 
+            jump = false; 
+
+            Vector3 stopVel = behaviourManager.GetRigidBody.linearVelocity;
+            stopVel.x = 0; 
+            stopVel.z = 0;
+            behaviourManager.GetRigidBody.linearVelocity = stopVel;
+            return; 
+        }
+
         MovementManagement(behaviourManager.GetH, behaviourManager.GetV);
         JumpManagement();
     }
@@ -56,7 +69,6 @@ public class AvatarMoveController : GenericBehaviour
         {
             behaviourManager.LockTempBehaviour(this.behaviourCode);
 
-            // 🔥 tandai anim Grounded = false saat awal lompat
             behaviourManager.GetAnim.SetBool(groundedBool, false);
             behaviourManager.GetAnim.SetBool(jumpBool, true);
 
@@ -175,7 +187,6 @@ public class AvatarMoveController : GenericBehaviour
         col.material.staticFriction = 0.6f;
     }
 
-    // 🔥 dipanggil UI Button
     public void TriggerJump()
     {
         if (!jump && behaviourManager.IsCurrentBehaviour(this.behaviourCode) &&

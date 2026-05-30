@@ -1,0 +1,781 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &189742894557219415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4485457850919705426}
+  - component: {fileID: 1256330853230046281}
+  - component: {fileID: 8196279428919724313}
+  - component: {fileID: 7641797273128593037}
+  m_Layer: 0
+  m_Name: Capsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4485457850919705426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189742894557219415}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.066, y: -0.175, z: 0.005}
+  m_LocalScale: {x: 0.38202935, y: 0.38202935, z: 0.38202935}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7004895887970549291}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1256330853230046281
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189742894557219415}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8196279428919724313
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189742894557219415}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 3a092c5e1020883428aa94cf4cf07f36, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &7641797273128593037
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189742894557219415}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &625797784676797429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4159198544214474232}
+  m_Layer: 0
+  m_Name: Socket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4159198544214474232
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625797784676797429}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.16086067, y: -0, z: -0, w: 0.98697716}
+  m_LocalPosition: {x: -0.349, y: 0.713, z: -2.362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7004895887970549291}
+  m_LocalEulerAnglesHint: {x: 18.514, y: 0, z: 0}
+--- !u!1 &4466711635482814483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7004895887970549291}
+  - component: {fileID: 659256874411383205}
+  - component: {fileID: 3854954857717303526}
+  - component: {fileID: 9170232226139181219}
+  - component: {fileID: 7134615855646319855}
+  m_Layer: 0
+  m_Name: NPC (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7004895887970549291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4466711635482814483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 419.77, y: 1.049, z: 480.97}
+  m_LocalScale: {x: 0.90548015, y: 0.90548015, z: 0.90548015}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4485457850919705426}
+  - {fileID: 6327837202143454627}
+  - {fileID: 4159198544214474232}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &659256874411383205
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4466711635482814483}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3854954857717303526
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4466711635482814483}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9170232226139181219
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4466711635482814483}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7134615855646319855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4466711635482814483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a5dbb9c6495e7a4f8a8cb246dc83211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  mainDialogue:
+    lines:
+    - speakerName: Agus
+      text: 'Oh! Hai lagi! '
+    - speakerName: Agus
+      text: 'Nah untuk orang pertama yang akan kamu temui.. uh.. '
+    - speakerName: Agus
+      text: 'Kau lihat teteh-teteh dengan baju kuning itu? '
+    - speakerName: Agus
+      text: 'Cobalah bertanya padanya, mungkin dai tau sesuatu. '
+    hasChoices: 0
+    option1:
+      choiceText: Gas!
+      followUpSequence:
+        lines:
+        - speakerName: Ucup
+          text: Mantap, bro!
+        hasChoices: 0
+        option1:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        option2:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        onSequenceEnd:
+          m_PersistentCalls:
+            m_Calls: []
+    option2:
+      choiceText: Skip
+      followUpSequence:
+        lines:
+        - speakerName: Ucup
+          text: Yahh ga asik lu!
+        hasChoices: 0
+        option1:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        option2:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        onSequenceEnd:
+          m_PersistentCalls:
+            m_Calls: []
+    onSequenceEnd:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ObjectiveMarker, Assembly-CSharp
+          m_MethodName: ActivateObjective
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  cameraSocket: {fileID: 4159198544214474232}
+--- !u!1001 &5790018429830185544
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7004895887970549291}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1043863
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1043863
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1043863
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5183463
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.019
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1862800335046982574, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2294a3cf1d0178949bd3e7c8dbd75c84, type: 2}
+    - target: {fileID: -1862800335046982574, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 27f08f0226b75fb4a8a66b1dbe82e081, type: 2}
+    - target: {fileID: -1862800335046982574, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 66dbebc6b97db764fb131580373e073f, type: 2}
+    - target: {fileID: -1862800335046982574, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d79479a8b5d823b49a252139a9167731, type: 2}
+    - target: {fileID: -1862800335046982574, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4afe3794e7ba3a24fa770cfed10165c5, type: 2}
+    - target: {fileID: -1862800335046982574, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c8ecff67ef7c538419b6738ece8c9023, type: 2}
+    - target: {fileID: -1862800335046982574, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[7]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0bab7cb2aa0452d4da997baf34a9dcd1, type: 2}
+    - target: {fileID: -1862800335046982574, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[8]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ca807c3b99fcea94393e5540a18b8c2a, type: 2}
+    - target: {fileID: -1862800335046982574, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[9]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 93dad58d0286ad343bf458d442c481f9, type: 2}
+    - target: {fileID: 919132149155446097, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161323409594152164, guid: fce0fb0920673b24b860d47351f312f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7025dcd03d8b46742bc294d4d40dbbcc, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fce0fb0920673b24b860d47351f312f4, type: 3}
+--- !u!4 &6327837202143454627 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fce0fb0920673b24b860d47351f312f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 5790018429830185544}
+  m_PrefabAsset: {fileID: 0}

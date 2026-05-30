@@ -96,6 +96,16 @@ public class AvatarMainController : MonoBehaviour
 
     void Update()
     {
+        // 🔥 Stop movement during dialogue!
+        if (DialogueManager.instance != null && DialogueManager.instance.dialogueCanvas.activeSelf)
+        {
+            h = 0;
+            v = 0;
+            anim.SetFloat(hFloat, 0, 0.1f, Time.deltaTime);
+            anim.SetFloat(vFloat, 0, 0.1f, Time.deltaTime);
+            return; // Skip input reads while talking
+        }
+
         // Ambil input dari joystick dulu
         if (playerJoystick != null && playerJoystick.IsTouching)
         {
