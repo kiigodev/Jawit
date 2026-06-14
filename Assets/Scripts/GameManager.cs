@@ -472,6 +472,10 @@ public class GameManager : MonoBehaviour
         // --- 1. Wait for the reveal animation ---
         yield return new WaitForSeconds(rpsRevealDuration);
 
+        if (enemyMove == Move.Rock) enemyRockIndicator.GetComponent<EnemyIndicator3D>().PlayLeave();
+        if (enemyMove == Move.Paper) enemyPaperIndicator.GetComponent<EnemyIndicator3D>().PlayLeave();
+        if (enemyMove == Move.Scissors) enemyScissorsIndicator.GetComponent<EnemyIndicator3D>().PlayLeave();
+
         // --- 1.5. Hide ALL Special UI (now that battle starts) ---
         ToggleAllSpecialUI(false); 
         ToggleAllEnemySpecialUI(false); 
@@ -1159,12 +1163,11 @@ public class GameManager : MonoBehaviour
     // Triggers animations on the *other* two images
     private void ShowEnemyRPSIndicator(Move move)
     {
-        // This will trigger the "animate out" on the two images NOT chosen
-        if (move != Move.Rock) SafeSetTrigger(enemyRockIndicator.GetComponent<Animator>(), SHAKE_TRIGGER);
-        if (move != Move.Paper) SafeSetTrigger(enemyPaperIndicator.GetComponent<Animator>(), SHAKE_TRIGGER);
-        if (move != Move.Scissors) SafeSetTrigger(enemyScissorsIndicator.GetComponent<Animator>(), SHAKE_TRIGGER);
+        if (move == Move.Rock) enemyRockIndicator.GetComponent<EnemyIndicator3D>().PlayHover();
+        if (move == Move.Paper) enemyPaperIndicator.GetComponent<EnemyIndicator3D>().PlayHover();
+        if (move == Move.Scissors) enemyScissorsIndicator.GetComponent<EnemyIndicator3D>().PlayHover();
     }
-    
+        
     private IEnumerator ShowDamageText(TextMeshProUGUI textElement, int damage)
     {
         if (textElement == null || damage <= 0)
