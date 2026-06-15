@@ -104,26 +104,31 @@ public class InventoryManager : MonoBehaviour
 
     public void CheckEnding()
     {
+        Debug.Log("YOO! CheckEnding was clicked!");
         int winCount = 0;
         
-        // Count how many items (wins) the player got
         for (int i = 0; i < 3; i++)
         {
             if (hasItem[i]) winCount++;
         }
 
-        // Loads the right ending scene based on total wins!
+        Debug.Log("Total wins counted: " + winCount);
+
         if (winCount == 0)
         {
+            Debug.Log("Trying to load: LoseAllEnding");
             SceneManager.LoadScene("LoseAllEnding"); 
         }
         else if (winCount == 1 || winCount == 2)
         {
+            Debug.Log("Trying to load: MixedEnding");
             SceneManager.LoadScene("MixedEnding"); 
         }
         else if (winCount == 3)
         {
+            Debug.Log("Trying to load: WinAllEnding");
             SceneManager.LoadScene("WinAllEnding");
         }
     }
+    
 }
