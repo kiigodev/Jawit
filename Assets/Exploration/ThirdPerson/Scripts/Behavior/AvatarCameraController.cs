@@ -7,7 +7,12 @@ public class AvatarCameraController : MonoBehaviour
     public Vector3 pivotOffset = new Vector3(0.0f, 1.7f, 0.0f);        // Offset pivot kamera
     public Vector3 camOffset = new Vector3(0.0f, 0.0f, -3.0f);         // Offset kamera
     public float smooth = 10f; // Kehalusan perpindahan kamera
-    public float rotationSmooth = 5f;                                  // Kehalusan rotasi kamera
+    public float rotationSmooth = 5f;   
+    
+    [Header("Zoom Settings")]
+    public float zoomSpeed = 2f;
+    public float minZoom = -1f; // Furthest away
+    public float maxZoom = -1f; // Closest                               // Kehalusan rotasi kamera
 
     [Header("Value Settings")]
     public float horizontalAimingSpeed = 6f;                           // Sensitivitas horizontal
@@ -53,6 +58,9 @@ public class AvatarCameraController : MonoBehaviour
         defaultFOV = cam.GetComponent<Camera>().fieldOfView;
         angleH = player.eulerAngles.y;
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         ResetTargetOffsets();
         ResetFOV();
         ResetMaxVerticalAngle();
@@ -68,34 +76,29 @@ public class AvatarCameraController : MonoBehaviour
             targetCamOffset = camOffset;
         }
 
-        // ---------------- INPUT ----------------
-        float h = Input.GetAxis("Horizontal"); // A/D
-        float v = Input.GetAxis("Vertical");   // W/S
+        // Grab mouse movement values
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
 
-        // --- Mouse Orbit (hanya kalau Mouse0 ditekan) ---
-        if (Input.GetMouseButton(0) || Input.GetMouseButton(2))
-        {
-            targetAngleH += Mathf.Clamp(Input.GetAxis("Mouse X"), -1, 1) * horizontalAimingSpeed;
-            targetAngleV += Mathf.Clamp(Input.GetAxis("Mouse Y"), -1, 1) * verticalAimingSpeed;
-        }
+        // --- Mouse Orbit (Always active, 100% manual control!) ---
+        targetAngleH += Mathf.Clamp(mouseX, -1, 1) * horizontalAimingSpeed;
+        targetAngleV += Mathf.Clamp(mouseY, -1, 1) * verticalAimingSpeed;
 
-        // --- Keyboard ---
-        if (v > 0f) // tekan W → kamera perlahan align ke belakang karakter
+        // --- Scroll Zoom ---
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        if (scroll != 0f && !isCustomOffset)
         {
-            float playerYaw = player.eulerAngles.y;
-            targetAngleH = Mathf.LerpAngle(targetAngleH, playerYaw, Time.deltaTime * rotationSmooth);
-        }
-        else if (h != 0f || v < 0f) // tekan A, S, D → kamera tidak berputar
-        {
-            // Biarkan targetAngleH tetap (kamera diam)
+            camOffset.z += scroll * zoomSpeed;
+            camOffset.z = Mathf.Clamp(camOffset.z, minZoom, maxZoom);
+            targetCamOffset = camOffset; 
         }
 
         // Clamp vertical angle
         targetAngleV = Mathf.Clamp(targetAngleV, minVerticalAngle, targetMaxVerticalAngle);
 
-        // Smooth interpolasi ke target angle
-        angleH = Mathf.Lerp(angleH, targetAngleH, Time.deltaTime * rotationSmooth);
-        angleV = Mathf.Lerp(angleV, targetAngleV, Time.deltaTime * rotationSmooth);
+        // Instant snap, no dizzy delay!
+        angleH = targetAngleH;
+        angleV = targetAngleV;
 
         // Hitung rotasi
         Quaternion camYRotation = Quaternion.Euler(0, angleH, 0);

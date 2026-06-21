@@ -35,12 +35,12 @@ public class AvatarMoveController : GenericBehaviour
     void Update()
     {
         // Keyboard input
-        if (!jump && Input.GetKeyDown(jumpButton) &&
-            behaviourManager.IsCurrentBehaviour(this.behaviourCode) &&
-            !behaviourManager.IsOverriding())
-        {
-            jump = true;
-        }
+        // if (!jump && Input.GetKeyDown(jumpButton) &&
+        //     behaviourManager.IsCurrentBehaviour(this.behaviourCode) &&
+        //     !behaviourManager.IsOverriding())
+        // {
+        //     jump = true;
+        // }
     }
 
     public override void LocalFixedUpdate()
@@ -83,6 +83,7 @@ public class AvatarMoveController : GenericBehaviour
 
                 float velocity = 2f * Mathf.Abs(Physics.gravity.y) * jumpHeight;
                 velocity = Mathf.Sqrt(velocity);
+                Vector3 forwardBoost = transform.forward * speed * 4f;
                 behaviourManager.GetRigidBody.AddForce(Vector3.up * velocity, ForceMode.VelocityChange);
             }
         }
@@ -127,7 +128,7 @@ public class AvatarMoveController : GenericBehaviour
         Vector2 dir = new Vector2(horizontal, vertical);
         speed = Vector2.ClampMagnitude(dir, 1f).magnitude;
 
-        speedSeeker += Input.GetAxis("Mouse ScrollWheel");
+        //speedSeeker += Input.GetAxis("Mouse ScrollWheel");
         speedSeeker = Mathf.Clamp(speedSeeker, walkSpeed, runSpeed);
 
         speed *= speedSeeker;

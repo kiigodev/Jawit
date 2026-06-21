@@ -51853,6 +51853,21 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 7471821355036560585, guid: d32dd52bd36a3b94e80c4d66c2e23742,
+        type: 3}
+      propertyPath: maxZoom
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471821355036560585, guid: d32dd52bd36a3b94e80c4d66c2e23742,
+        type: 3}
+      propertyPath: minZoom
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471821355036560585, guid: d32dd52bd36a3b94e80c4d66c2e23742,
+        type: 3}
+      propertyPath: zoomSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8495968158346151347, guid: d32dd52bd36a3b94e80c4d66c2e23742,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

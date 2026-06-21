@@ -1009,6 +1009,7 @@ GameObject:
   - component: {fileID: 974608208}
   - component: {fileID: 974608207}
   - component: {fileID: 974608209}
+  - component: {fileID: 974608210}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1141,6 +1142,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &974608210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974608206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a9e62408e4ce7458bc45fa49688093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenuController
 --- !u!224 &1073814390 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8782889969239776715, guid: 692c6c992395f914290c3bfa4be7633b,
@@ -1343,6 +1356,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button_Start (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857516946514400182, guid: 692c6c992395f914290c3bfa4be7633b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857516946514400182, guid: 692c6c992395f914290c3bfa4be7633b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857516946514400182, guid: 692c6c992395f914290c3bfa4be7633b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 974608210}
+    - target: {fileID: 6857516946514400182, guid: 692c6c992395f914290c3bfa4be7633b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857516946514400182, guid: 692c6c992395f914290c3bfa4be7633b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: KeluarGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857516946514400182, guid: 692c6c992395f914290c3bfa4be7633b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857516946514400182, guid: 692c6c992395f914290c3bfa4be7633b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8782889969239776715, guid: 692c6c992395f914290c3bfa4be7633b,
         type: 3}

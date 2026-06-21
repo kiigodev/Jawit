@@ -53,22 +53,24 @@ public class DialogueManager : MonoBehaviour
         // 👇 Freeze the new player controller
         if (playerScript) 
         {
-            playerScript.enabled = false;
-            // Zero out animation floats so they don't moonwalk in place 😂
+            //playerScript.enabled = false;
+
             playerScript.GetAnim.SetFloat("H", 0);
             playerScript.GetAnim.SetFloat("V", 0);
         }
         
-        // 👇 Handle the new camera
         if (camScript) 
         {
-            camScript.enabled = false; // Stop regular camera logic
+            camScript.enabled = false; 
             if (cameraSocket != null)
             {
                 Camera.main.transform.position = cameraSocket.position;
                 Camera.main.transform.rotation = cameraSocket.rotation;
             }
         }
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         
         currentSequence = sequence;
         currentLineIndex = 0;
@@ -148,9 +150,11 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueCanvas.SetActive(false);
         
-        // 👇 Unfreeze everything!
-        if (playerScript) playerScript.enabled = true; 
+        //if (playerScript) playerScript.enabled = true; 
         if (camScript) camScript.enabled = true; 
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         
         if (currentSequence.onSequenceEnd != null) currentSequence.onSequenceEnd.Invoke();
     }
